@@ -13,6 +13,10 @@ toDoList.prototype.assignId = function() {
   return this.currentId;
 }
 
+// todoList.prototype.deleteItem = function(deleteTask) {
+//
+// }
+
 function items(item) {
   this.toDo = item
 }
@@ -24,8 +28,7 @@ $(document).ready(function() {
     event.preventDefault();
     var input = $("input#userInput").val();
     var newnew = new items(input);
-    alert(newnew.toDo);
     newList.addItem(newnew);
-    console.log(newList.item)
+    $("#display").append("<li>" + newnew.toDo + "</li>");
   });
 });
